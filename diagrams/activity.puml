@@ -1,0 +1,53 @@
+@startuml
+!theme aws-orange
+start
+:User interacts with the configurator;
+if (Form is selected) then (yes)
+  :Display form options;
+  if (Option is selected) then (yes)
+    :Update form state;
+  else (no)
+    :Continue;
+  endif
+endif
+
+if (Cake material is selected) then (yes)
+  :Display material options;
+  if (Option is selected) then (yes)
+    :Update material state;
+  else (no)
+    :Continue;
+  endif
+endif
+
+if (Cake color is selected) then (yes)
+  :Display color options;
+  if (Option is selected) then (yes)
+    :Update color state;
+  else (no)
+    :Continue;
+  endif
+endif
+
+if (Cream color is selected) then (yes)
+  :Display cream color options;
+  if (Option is selected) then (yes)
+    :Update cream color state;
+  else (no)
+    :Continue;
+  endif
+endif
+
+if (Decorations are selected) then (yes)
+  :Display decoration options;
+  if (Option is selected) then (yes)
+    :Update decorations state;
+  else (no)
+    :Continue;
+  endif
+endif
+
+:Render the 3D cake object with the selected options;
+stop
+
+@enduml

@@ -1,0 +1,85 @@
+@startuml
+!theme aws-orange
+actor User
+
+User -> Configurator: Interacts with the configurator
+
+activate Configurator
+
+Configurator -> CustomizationContext: Accesses customization data
+
+activate CustomizationContext
+
+Configurator -> CustomizationContext: Retrieves customization options
+
+Configurator <-- CustomizationContext: Returns customization options
+
+Configurator -> User: Displays customization options
+
+User -> Configurator: Selects form option
+
+activate Configurator
+
+Configurator -> CustomizationContext: Updates form state
+
+Configurator <-- CustomizationContext: Returns updated form state
+
+deactivate Configurator
+
+User -> Configurator: Selects cake material option
+
+activate Configurator
+
+Configurator -> CustomizationContext: Updates material state
+
+Configurator <-- CustomizationContext: Returns updated material state
+
+deactivate Configurator
+
+User -> Configurator: Selects cake color option
+
+activate Configurator
+
+Configurator -> CustomizationContext: Updates cake color state
+
+Configurator <-- CustomizationContext: Returns updated cake color state
+
+deactivate Configurator
+
+User -> Configurator: Selects cream color option
+
+activate Configurator
+
+Configurator -> CustomizationContext: Updates cream color state
+
+Configurator <-- CustomizationContext: Returns updated cream color state
+
+deactivate Configurator
+
+User -> Configurator: Selects decorations options
+
+activate Configurator
+
+Configurator -> CustomizationContext: Updates decorations state
+
+Configurator <-- CustomizationContext: Returns updated decorations state
+
+deactivate Configurator
+
+User -> Configurator: Requests cake rendering
+
+activate Configurator
+
+Configurator -> Cake: Renders the 3D cake object with selected options
+
+activate Cake
+
+Configurator <-- Cake: Returns the rendered cake object
+
+deactivate Cake
+
+Configurator <-- User: Displays the rendered 3D cake object
+
+deactivate Configurator
+
+@enduml

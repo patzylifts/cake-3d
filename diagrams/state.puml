@@ -1,0 +1,31 @@
+@startuml
+!theme superhero
+
+state Configurator {
+  [*] --> Form
+  Form --> Material
+  Material --> Color
+  Color --> CreamColor
+  CreamColor --> Decorations
+  Decorations --> RenderCake
+  RenderCake --> [*]
+}
+Form:Round
+Form:Heart
+
+Material:Abstract
+Material:Surface
+Material:Wood
+Material:BarkPine
+Material:Candy
+Material:StylizedFur
+Material:Lava
+
+Color:CakeColor
+CreamColor:CreamColorOption
+Decorations:Nuts
+Decorations:Chocolate
+Decorations:Balls
+Decorations:Candle
+
+@enduml

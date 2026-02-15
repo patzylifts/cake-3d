@@ -1,0 +1,25 @@
+@startuml
+!theme aws-orange
+package "Cake_configurator" {
+  [App]
+  [main]
+
+  package "components" {
+    [Cake]
+    [Configurator]
+    [Experience]
+  }
+
+  package "contexts" {
+    [Customization]
+  }
+
+}
+[App] --> [Cake]
+[App] --> [Configurator]
+[App] --> [Experience]
+[main] --> [App]
+[Cake] --> [Customization]
+[Configurator] --> [Customization]
+[Experience] --> [Customization]
+@enduml
